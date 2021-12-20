@@ -21,12 +21,12 @@ class HomeViewController: BaseController, UITableViewDelegate, UITableViewDataSo
         TableView.dataSource = self
         TableView.delegate = self
         
-        items.append(Post(fullname: "Sherzod", user_img: "person1", post_img: "image1"))
-        items.append(Post(fullname: "Suxrob", user_img: "person2", post_img: "image2"))
-        items.append(Post(fullname: "Ezozbek", user_img: "person1", post_img: "image3"))
-        items.append(Post(fullname: "Islom", user_img: "person2", post_img: "image4"))
-        items.append(Post(fullname: "Sanjar", user_img: "person1", post_img: "image5"))
-        items.append(Post(fullname: "Muxriddin", user_img: "person2", post_img: "image6"))
+        items.append(Post(fullname: "Sherzod", user_img: "person1", post_img: "image1", post_img2: "image6"))
+        items.append(Post(fullname: "Suxrob", user_img: "person2", post_img: "image2", post_img2: "image5"))
+        items.append(Post(fullname: "Ezozbek", user_img: "person3", post_img: "image3", post_img2: "image4"))
+        items.append(Post(fullname: "Islom", user_img: "person4", post_img: "image4", post_img2: "image3"))
+        items.append(Post(fullname: "Sanjar", user_img: "person5", post_img: "image5", post_img2: "image2"))
+        items.append(Post(fullname: "Muxriddin", user_img: "person6", post_img: "image6", post_img2: "image1"))
     }
     func setNavigationBar(){
         let camera = UIImage(systemName: "camera.fill")
@@ -64,6 +64,7 @@ class HomeViewController: BaseController, UITableViewDelegate, UITableViewDataSo
         cell.Fullname.text = item.fullname
         cell.ProfileImage.image = UIImage(named: item.user_img!)
         cell.PostImage.image = UIImage(named: item.post_img!)
+        cell.PostImage2.image = UIImage(named: item.post_img2!)
         
         return cell
     }

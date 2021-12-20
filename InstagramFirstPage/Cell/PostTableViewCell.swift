@@ -18,4 +18,6 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var Fullname: UILabel!
     
     @IBOutlet weak var PostImage: UIImageView!
+    
+    @IBOutlet weak var PostImage2: UIImageView!
 }
